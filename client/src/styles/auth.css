@@ -1,0 +1,212 @@
+.auth {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100svw;
+  height: 100svh;
+}
+
+.auth .all_auth_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  width: 55rem;
+  height: 32rem;
+  padding: 1rem;
+  color: var(--low-secondary-color);
+  border-radius: 0.2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.auth .all_auth_container .switch {
+  width: 50%;
+  position: absolute;
+  height: 100%;
+  padding: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth .all_auth_container .switch .logo {
+  margin-bottom: 5rem;
+}
+
+.auth .all_auth_container .switch .other {
+  margin-top: 2rem;
+}
+
+.auth .all_auth_container .switch button {
+  background: var(--low-secondary-color);
+  color: var(--black-color);
+  border-radius: 0.2rem;
+  border: none;
+  cursor: pointer;
+  width: 10rem;
+  height: 2.5rem;
+  font-size: 1rem;
+}
+
+.auth .all_auth_container .switch.login_switch {
+  left: 0;
+  transition: ease-in-out 0.6s;
+  transition-delay: 0.6s;
+}
+
+.auth .all_auth_container .switch.reg_switch {
+  right: -50%;
+  transition: ease-in-out 0.6s;
+}
+
+.auth .all_auth_container.active .switch.login_switch {
+  left: -50%;
+  transition: ease-in-out 0.6s;
+}
+
+.auth .all_auth_container.active .switch.reg_switch {
+  right: 0;
+  transition: ease-in-out 0.6s;
+  transition-delay: 0.6s;
+}
+
+.auth .all_auth_container .sign_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.auth .all_auth_container .sign_container form {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: var(--low-secondary-color);
+  color: var(--black-color);
+  position: absolute;
+  right: 0;
+  transition: ease-in-out 0.6s;
+  border-radius: 0.2rem;
+  padding: 2rem;
+  gap: 1rem;
+}
+
+.auth .all_auth_container.active .sign_container form {
+  right: 50%;
+  transition: ease-in-out 0.6s;
+}
+
+.auth .all_auth_container .sign_container form.login {
+  visibility: show;
+  /* transition: ease-in-out 0.6s; */
+}
+.auth .all_auth_container.active .sign_container form.login {
+  visibility: hidden;
+  /* transition: ease-in-out 0.6s; */
+}
+.auth .all_auth_container .sign_container form.signup {
+  /* transition: ease-in-out 0.6s; */
+}
+.auth .all_auth_container.active .sign_container form.signup {
+}
+
+.auth .all_auth_container .sign_container form h1 {
+  margin-bottom: 2rem;
+}
+
+.auth .all_auth_container .sign_container form .field_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.auth .all_auth_container .sign_container form .field_container input {
+  width: 100%;
+  height: 3rem;
+  padding-inline: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: none;
+  border-bottom: 1px solid var(--low-primary-color);
+  color: var(--black-color);
+}
+
+.auth .all_auth_container .sign_container form .field_container input:focus {
+  border: 2px solid var(--low-primary-color);
+  border-radius: 0.2rem;
+}
+
+.auth .all_auth_container .sign_container form .field_container label {
+  position: absolute;
+  left: 0.5rem;
+  top: 1rem;
+  transition: ease-in-out 0.3s;
+}
+
+.auth
+  .all_auth_container
+  .sign_container
+  form
+  .field_container:has(input:focus)
+  label,
+.auth
+  .all_auth_container
+  .sign_container
+  form
+  .field_container:has(input:not(:placeholder-shown))
+  label {
+  top: -0.5rem;
+  font-size: 0.8rem;
+  color: var(--low-primary-color);
+  background: var(--low-secondary-color);
+  padding-inline: 0.1rem;
+}
+
+.auth
+  .all_auth_container
+  .sign_container
+  form
+  .field_container:has(input:not(:placeholder-shown))
+  input {
+  border: 2px solid var(--low-primary-color);
+  border-radius: 0.2rem;
+}
+
+.auth .all_auth_container .sign_container form .field_container .see {
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.auth .all_auth_container .sign_container form .field_container .see svg {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.auth .all_auth_container .sign_container form .submit {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  background: var(--primary-color);
+  font-size: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--low-secondary-color);
+  border-radius: 0.2rem;
+}
