@@ -27,3 +27,7 @@
 body {
   background-color: var(--low-secondary-color);
 }
+
+h1 {
+  font-size: 2rem;
+}

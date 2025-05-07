@@ -4,7 +4,7 @@ const sessionMiddleware = require("../../ultils/sessionMidleware");
 const startSocket = (server) => {
   const io = new Server(server, {
     cors: {
-      origin: "*",
+      origin: `${process.env.CLIENT_URL}`,
       methods: ["GET", "POST"],
       credentials: true,
     },
@@ -16,6 +16,10 @@ const startSocket = (server) => {
 
   io.on("connection", (socket) => {
     console.log("a user connected");
+
+    socket.on("message", (data) => {
+      console.log(data);
+    });
   });
 };
 

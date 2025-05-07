@@ -1,0 +1,101 @@
+.sidebar {
+  color: var(--low-secondary-color);
+}
+
+.sidebar .sidebar_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+
+.sidebar .sidebar_header::after {
+  content: "";
+  display: block;
+  width: 90%;
+  height: 1px;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+}
+
+.sidebar .sidebar_header img {
+  width: 3rem;
+  height: 3rem;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.sidebar .users_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.sidebar .users_container .btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 2rem;
+}
+
+.sidebar .users_container .btns button {
+  width: 8rem;
+  height: 2rem;
+  font-size: 1rem;
+  border-radius: 5rem;
+  background: var(--secondary-color);
+  color: var(--low-secondary-color);
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar .all_users {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+
+.sidebar .all_users a {
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  text-decoration: none;
+  color: var(--primary-color);
+  background: var(--low-secondary-color);
+  border-radius: 0.2rem;
+}
+
+.sidebar .all_users a::after {
+  content: "";
+  display: block;
+  width: 95%;
+  height: 1px;
+  background: var(--primary-color);
+  position: absolute;
+  bottom: 0;
+  opacity: 0.3;
+}
+
+.sidebar .all_users a img {
+  width: 3rem;
+  height: 3rem;
+  background: var(--secondary-color);
+  border-radius: 50%;
+}
+
+.sidebar .all_users a .info {
+}
+.sidebar .all_users a .info .name {
+  font-weight: bold;
+}

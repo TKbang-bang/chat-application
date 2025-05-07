@@ -1,0 +1,31 @@
+.home {
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .sidebar {
+  /* width: 20svw; */
+  border: 1px solid #000;
+  background: var(--primary-color);
+  height: 100svh;
+  width: 25vw;
+}
+
+.home .no_chats {
+  /* width: 80svw; */
+  border: 1px solid #000;
+  height: 100svh;
+  width: 75vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home .chat {
+  height: 100svh;
+  width: 75vw;
+}

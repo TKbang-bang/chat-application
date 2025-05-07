@@ -1,5 +1,6 @@
 import React from "react";
 import { VisibleIcon, InvisibleIcon } from "../../outil/svg";
+import { useNavigate } from "react-router-dom";
 import { toast } from "sonner";
 import axios from "axios";
 
@@ -10,6 +11,8 @@ function SignUp() {
   const [password, setPassword] = React.useState("");
   const [seePassword, setSeePassword] = React.useState(false);
 
+  const navigate = useNavigate();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -17,6 +20,9 @@ function SignUp() {
       toast.error("Please fill in all the fields");
       return;
     }
+
+    if (password.length < 6 || password.length > 15)
+      return toast.error("Password must be between 6 and 15 characters");
 
     try {
       const res = await axios.post("/auth/signup", {
@@ -26,7 +32,9 @@ function SignUp() {
         password,
       });
 
-      console.log(res);
+      if (!res.data.ok) throw new Error(res.data.message);
+
+      navigate("/");
     } catch (error) {
       return toast.error(error.response.data.message);
     }
